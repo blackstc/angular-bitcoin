@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- define our angular app and set the controller -->
-<html ng-app="app" ng-controller="bitcoinController">
+<html ng-app="app">
 <head>
   <title>Bitcoin Investment Calculator</title>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@
           <input type="number" ng-model="initalAmt" class="form-control" placeholder="{{initalAmt}}">
         </form>
         <br>
-        <p>Current Price (USD): <span class="number">{{currRate | currency }}</span></p>
+        <bitcoin-value></bitcoin-value>
       </div>
     </div>
     <div class="row">
@@ -51,10 +51,14 @@
     <!-- inject:js -->
     <script src="./app/app.module.js"></script>
     <script src="./app/controllers/controllers.module.js"></script>
+    <script src="./app/controllers/bitcoin/bitcoin.module.js"></script>
     <script src="./app/controllers/investmentTable/investmentTable.module.js"></script>
     <script src="./app/directives/directives.module.js"></script>
+    <script src="./app/directives/bitcoin/bitcoin.module.js"></script>
     <script src="./app/directives/investmentTable/investmentTable.module.js"></script>
     <script src="./app/services/services.module.js"></script>
+    <script src="./app/controllers/bitcoin/bitcoin.controller.js"></script>
+    <script src="./app/directives/bitcoin/bitcoin.directive.js"></script>
     <script src="./app/controllers/investmentTable/investmentTable.controller.js"></script>
     <script src="./app/directives/investmentTable/investmentTable.directive.js"></script>
     <script src="./app/services/services.js"></script>

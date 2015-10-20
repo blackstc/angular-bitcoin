@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('app.directives', [
-    'app.directives.investmentTable'
+    'app.directives.investmentTable',
+    'app.directives.bitcoin'
   ]);
-  
+
 })();
