@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Price of 1 BTC</th>
+      <th>Starting Investment</th>
+      <th>Profit</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr ng-repeat="price in prices">
+        <td>{{ price | currency }}</td>
+        <td>{{ newAmt(price, currRate, initalAmt) | currency }}</td>
+        <td>{{ profit(price, currRate, initalAmt) | currency }}</td>
+      </tr>
+    </tbody>
+</table>
